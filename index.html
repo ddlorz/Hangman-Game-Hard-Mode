@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>Hangman Hangman</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+	<nav class="navbar navbar-default blackBG" style="border: none;">
+		<div class="container">
+			<header class="text-center benderHeader">
+			<h3>BENDER'S</h3>
+			<h1>ROBOTS RULE</h1>
+			<h4>HangHuman Game</h4>
+			</header>
+		</div>
+	</nav>
+
+	<div class="container"> 
+		<div class="row">
+			 <div class="col-md-5 blackBG">
+			 	<img src="assets/images/futurama-bender.jpg" alt="Bender">
+			 </div>
+			 <div class="col-md-5 blackBG">
+				<img src="assets/images/jolly_bender.jpg" alt="Bender" class="jollyBender">
+				<div class="text-center" id="longText">Guess the word before the timer hits 0 or it's Hasta la vista meatbag</div>
+				<div class="text-center" id="timerBox"></div>
+				<div class="text-center" id="messageBox"><h2 id="blinkyText">Press Enter to Start</h2></div>
+				<div class="text-center" id="theWord"></div>
+				<div class="text-center" id="livesLeft"></div>
+				<div class="text-center" id="guessBox"></div>
+				<div class="text-center" id="winBox">Wins: 0</div>
+				<div class="text-center" id="lossBox">Loss: 0</div>
+				
+			 </div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>
