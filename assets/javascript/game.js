@@ -1,9 +1,9 @@
 //Audio and aesthetic functions and declarations
 new Audio('assets/sounds/themesong.mp3').play();
 
-setInterval (function() {
+/*setInterval (function() {
 	new Audio('assets/sounds/themesong.mp3').play();
-}, 120000);
+}, 120000);*/
 
 setInterval (function() {		
 	document.getElementById("blinkyText").style.color = "#ffffff";
