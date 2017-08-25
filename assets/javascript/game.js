@@ -1,15 +1,17 @@
 //Audio and aesthetic functions and declarations
-//new Audio('assets/sounds/themesong.mp3').play();
+var audio = new Audio('assets/sounds/themesong.mp3');
+audio.volume = 0.03;
+audio.play();
 
-/*setInterval (function() {
-	new Audio('assets/sounds/themesong.mp3').play();
-}, 120000);*/
+setInterval (function() {
+	audio.play();
+}, 120000);
 
 setInterval (function() {		
 	document.getElementById("blinkyText").style.color = "#ffffff";
 	setTimeout(function() {
 	document.getElementById("blinkyText").style.color = "#e60000";
-	}, 500)
+	}, 300)
 }, 1000);
 
 var soundOfBenderWin = ['assets/sounds/win_1.mp3', 
@@ -102,7 +104,9 @@ function mainFunction() {
 
 		if (mainObject.entryInput === "Enter") {
 			randomNumberForSound = Math.floor(Math.random() * 4) + 0;
-			new Audio('assets/sounds/intro.mp3').play();	
+			var intro = new Audio('assets/sounds/intro.mp3');	
+			intro.volume = 0.03;
+			intro.play();
 			blinky.innerHTML = "Good Luck Chum!"	
 			
 			clock();
@@ -142,19 +146,25 @@ function mainFunction() {
 							}			
 
 							blinky.innerHTML = "Good Luck Chum!" + "<br>" + "Good One!"	
-							new Audio('assets/sounds/goodletter.mp3').play();
+							var goodletter = new Audio('assets/sounds/goodletter.mp3');
+							goodletter.volume = 0.03;
+							goodletter.play();
 							mainObject.inputsList.push(inputHolder);						
 						}
 						else {
 							mainObject.inputsList.push(inputHolder);	
 							blinky.innerHTML = "Good Luck Chum!" + "<br>" + "No Match!"
-							new Audio('assets/sounds/badletter.mp3').play();
+							var badletter = new Audio('assets/sounds/badletter.mp3');
+							badletter.volume = 0.03;
+							badletter.play();
 							mainObject.mainI++;
 						}
 					}
 					else {
 						blinky.innerHTML = "Good Luck Chum!" + "<br>" + "Character No Good!"
-						new Audio('assets/sounds/noletter.mp3').play();
+						var noletter = new Audio('assets/sounds/noletter.mp3');
+						noletter.volume = 0.03;
+						noletter.play();
 					}
 
 					//Array to string function
@@ -171,7 +181,11 @@ function mainFunction() {
 						mainObject.winscore++;
 						document.getElementById("winBox").innerHTML = "Wins: " + mainObject.winscore
 						blinky.innerHTML = "Beginner's Luck!" + "<br>" + "Press Enter to continue"
-						setTimeout(function() {new Audio(soundOfBenderWin[randomNumberForSound]).play();}, 2000);
+						setTimeout(function() {
+							var sound = new Audio(soundOfBenderWin[randomNumberForSound]);
+							sound.volume = 0.03;
+							sound.play();
+						}, 2000);
 						clearTimeout(myTimer);
 						mainFunction();
 					}
@@ -180,7 +194,11 @@ function mainFunction() {
 						document.getElementById("lossBox").innerHTML = "Loss: " + mainObject.lossscore
 						blinky.innerHTML = "Hasta la vista Meatbag!" + "<br>" + "Press Enter to continue"
 						mainObject.guessLetters.innerHTML = "Answer: " + "<div style='display: inline; letter-spacing: 4px; color: red;'>" + bufferWord + "</div>"
-						setTimeout(function() {new Audio(soundOfBenderLoss[randomNumberForSound]).play();}, 2000);
+						setTimeout(function() {
+							var sound = new Audio(soundOfBenderLoss[randomNumberForSound]).play();
+							sounds.volume = 0.03;
+							sounds.play();
+						}, 2000);
 						clearTimeout(myTimer);
 						mainFunction();
 					}								
