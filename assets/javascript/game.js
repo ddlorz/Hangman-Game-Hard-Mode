@@ -1,5 +1,5 @@
 //Audio and aesthetic functions and declarations
-new Audio('assets/sounds/themesong.mp3').play();
+//new Audio('assets/sounds/themesong.mp3').play();
 
 /*setInterval (function() {
 	new Audio('assets/sounds/themesong.mp3').play();
